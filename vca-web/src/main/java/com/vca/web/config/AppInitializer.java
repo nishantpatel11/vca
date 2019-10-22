@@ -1,4 +1,4 @@
-package com.vca.web.controller.config;
+package com.vca.web.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

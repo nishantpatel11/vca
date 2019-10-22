@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!-- Appenders -->
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d [%t] %-5p %c - %m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="file" class="org.apache.log4j.RollingFileAppender">
+	   <param name="append" value="false" />
+	   <param name="maxFileSize" value="10MB" />
+	   <param name="maxBackupIndex" value="5" />
+	   
+	   <param name="file" value="${logDir}/websocket-debug.log" />
+	   <layout class="org.apache.log4j.PatternLayout">
+		<param name="ConversionPattern" 
+			value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" />
+	   </layout>
+	</appender>
+	
+	<!-- Application Loggers -->
+	<logger name="com.vca">
+		<level value="info" />
+	</logger>
+	
+	<!-- 3rdparty Loggers -->
+	<logger name="org.springframework.core">
+		<level value="info" />
+	</logger>
+	
+	<logger name="org.springframework.beans">
+		<level value="info" />
+	</logger>
+	
+	<logger name="org.springframework.context">
+		<level value="info" />
+	</logger>
+
+	<logger name="org.springframework.web">
+		<level value="info" />
+	</logger>
+
+	<logger name="org.hibernate.stat">
+		<level value="info" />
+	</logger>
+
+	<logger name="org.hibernate.cache">
+		<level value="info" />
+	</logger>
+	
+	<logger name="org.apache.spark">
+		<level value="error" />
+	</logger>
+	<logger name="org.spark_project.jetty">
+		<level value="error" />
+	</logger>
+		<logger name="org.apache.hadoop.conf.Configuration">
+		<level value="error" />
+	</logger>
+	
+	
+	<logger name="kafka.consumer.ConsumerFetcherManager">
+		<level value="error" />
+	</logger>
+	
+	<logger name="kafka.consumer.ConsumerFetcherManager$LeaderFinderThread">
+		<level value="error" />
+	</logger>
+	
+	<logger name="kafka.utils.VerifiableProperties">
+		<level value="error" />
+	</logger>
+	
+	<logger name="org.apache.kafka.clients.NetworkClient">
+		<level value="error" />
+	</logger>
+	
+	<logger name="org.apache.spark">
+		<level value="warn" />
+	</logger>
+	<logger name="org.spark_project.jetty">
+		<level value="warn" />
+	</logger>
+		<logger name="org.apache.hadoop.conf.Configuration">
+		<level value="warn" />
+	</logger>
+	
+	<logger name="org.spark_project.jetty.util.component.AbstractLifeCycle">
+		<level value="error" />
+	</logger>
+	<logger name="org.apache.spark.sql.SparkSession$Builder">
+		<level value="error" />
+	</logger>
+	
+	<logger name="org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker">
+		<level value="warn" />
+	</logger>
+	
+	<logger name="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping">
+		<level value="warn" />
+	</logger>
+	
+	
+<!-- 		
+	<logger name="com.cordis.pushcord.communication">
+		<level value="debug" />
+		<appender-ref ref="file"/>
+	</logger>
+	
+	<logger name="com.cordis.pushcord.schema.form">
+		<level value="debug" />
+		<appender-ref ref="file"/>
+	</logger>
+	
+	<logger name="com.cordis.pushcord.action">
+		<level value="debug" />
+		<appender-ref ref="file"/>
+	</logger>
+	 -->
+	<!-- Root Logger -->
+	<root>
+		<priority value="info" />
+		<appender-ref ref="console" />
+	</root>
+	
+</log4j:configuration>
