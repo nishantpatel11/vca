@@ -357,6 +357,7 @@
 		<module>vca-db</module>
 		<module>vca-web</module>
     <module>vca-service</module>
+    <module>vca-generic-dao</module>
   </modules>
 
 </project>

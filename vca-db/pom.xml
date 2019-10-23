@@ -6,10 +6,10 @@
     <groupId>com.vca</groupId>
     <artifactId>vca</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+	<relativePath>..</relativePath>
   </parent>
   <groupId>com.vca.db</groupId>
   <artifactId>vca-db</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <name>vca-db</name>
   <url>http://maven.apache.org</url>
   <properties>
