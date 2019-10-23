@@ -32,6 +32,11 @@
 		</dependency>
 		<dependency>
 			<groupId>com.vca</groupId>
+			<artifactId>vca-generic-dao</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vca</groupId>
 			<artifactId>vca-service</artifactId>
 			<version>${project.version}</version>
 		</dependency>

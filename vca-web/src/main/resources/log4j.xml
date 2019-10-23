@@ -22,14 +22,26 @@
 	   </layout>
 	</appender>
 	
+	
+		<logger
+
+		name="org.hibernate.engine.internal.StatisticalLoggingSessionEventListener">
+
+		<level value="FATAL" />
+
+		<appender-ref ref="stdout" />
+
+	</logger>
+	
+	
 	<!-- Application Loggers -->
-	<logger name="com.vca">
+	<logger name="com.cordis.vca">
 		<level value="info" />
 	</logger>
 	
 	<!-- 3rdparty Loggers -->
 	<logger name="org.springframework.core">
-		<level value="info" />
+		<level value="debug" />
 	</logger>
 	
 	<logger name="org.springframework.beans">
@@ -37,11 +49,11 @@
 	</logger>
 	
 	<logger name="org.springframework.context">
-		<level value="info" />
+		<level value="debug" />
 	</logger>
 
 	<logger name="org.springframework.web">
-		<level value="info" />
+		<level value="debug" />
 	</logger>
 
 	<logger name="org.hibernate.stat">
@@ -52,71 +64,18 @@
 		<level value="info" />
 	</logger>
 	
-	<logger name="org.apache.spark">
-		<level value="error" />
-	</logger>
-	<logger name="org.spark_project.jetty">
-		<level value="error" />
-	</logger>
-		<logger name="org.apache.hadoop.conf.Configuration">
-		<level value="error" />
-	</logger>
-	
-	
-	<logger name="kafka.consumer.ConsumerFetcherManager">
-		<level value="error" />
-	</logger>
-	
-	<logger name="kafka.consumer.ConsumerFetcherManager$LeaderFinderThread">
-		<level value="error" />
-	</logger>
-	
-	<logger name="kafka.utils.VerifiableProperties">
-		<level value="error" />
-	</logger>
-	
-	<logger name="org.apache.kafka.clients.NetworkClient">
-		<level value="error" />
-	</logger>
-	
-	<logger name="org.apache.spark">
-		<level value="warn" />
-	</logger>
-	<logger name="org.spark_project.jetty">
-		<level value="warn" />
-	</logger>
-		<logger name="org.apache.hadoop.conf.Configuration">
-		<level value="warn" />
-	</logger>
-	
-	<logger name="org.spark_project.jetty.util.component.AbstractLifeCycle">
-		<level value="error" />
-	</logger>
-	<logger name="org.apache.spark.sql.SparkSession$Builder">
-		<level value="error" />
-	</logger>
-	
-	<logger name="org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker">
-		<level value="warn" />
-	</logger>
-	
-	<logger name="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping">
-		<level value="warn" />
-	</logger>
-	
-	
 <!-- 		
-	<logger name="com.cordis.pushcord.communication">
+	<logger name="com.cordis.vca.communication">
 		<level value="debug" />
 		<appender-ref ref="file"/>
 	</logger>
 	
-	<logger name="com.cordis.pushcord.schema.form">
+	<logger name="com.cordis.vca.schema.form">
 		<level value="debug" />
 		<appender-ref ref="file"/>
 	</logger>
 	
-	<logger name="com.cordis.pushcord.action">
+	<logger name="com.cordis.vca.action">
 		<level value="debug" />
 		<appender-ref ref="file"/>
 	</logger>
