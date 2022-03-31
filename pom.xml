@@ -11,7 +11,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java-version>1.8</java-version>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
-		<spring.version>5.2.0.RELEASE</spring.version>
+		<spring.version>5.3.18</spring.version>
 		<org.springframework-version-release>5.2.0.RELEASE</org.springframework-version-release>
 		<hibernate.version>5.2.12.Final</hibernate.version>
 		<hibernate.validator>6.0.5.Final</hibernate.validator>
